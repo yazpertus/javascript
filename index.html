@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador plazo fijo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body onload="iniciarCalculadora()">
+    <div class="modal" id="ageVerificationModal">
+        <p class="message">Para acceder al contenido, por favor ingrese su fecha de nacimiento:</p>
+        <input type="date" id="fechaNacimiento" required>
+        <div class="options">
+            <button class="btn" id="verificarBtn">Verificar</button>
+        </div>
+    </div>
+
+        <section>
+            <div id="content" style="display: none;">
+                <!-- Contenido de la página -->
+                <h1>Bienvenido al Simulador de plazo fijo</h1>
+                <p>Todo lo que necesitas saber, está aquí.</p>
+            </div>
+
+
+        <div class="container">
+            <div class="calculadora">
+                <h1>Calcular tu plazo fijo</h1>
+                <form>
+                    <label for="banco">Banco:</label>
+                    <select id="banco" required>
+                        <option value="" disabled selected>Seleccione un banco</option>
+                        <option value="Banco de la Nacion">Banco de la Nacion</option>
+                        <option value="Banco Santander">Banco Santander</option>
+                        <option value="Banco Galicia">Banco Galicia</option>
+                        <option value="Banco Provincia">Banco Provincia</option>
+                        <option value="Banco BBVA">Banco BBVA</option>
+                        <option value="Banco Macro">Banco Macro</option>
+                        <option value="Banco HSBC">Banco HSBC</option>
+                        <option value="Banco Credicoop">Banco Credicoop</option>
+                        <option value="Banco ICBC">Banco ICBC</option>
+                        <option value="Banco Ciudad">Banco Ciudad</option>
+                    </select><br><br>
+                    
+
+
+                    <label for="monto">Monto del Plazo Fijo:</label>
+                    <input type="number" id="monto" placeholder="Ingrese el monto" required><br><br>
+
+                    <label for="plazo">Plazo en días:</label>
+                    <select id="plazo">
+                        <option value="30">30 días</option>
+                        <option value="60">60 días</option>
+                        <option value="90">90 días</option>
+                        <option value="180">180 días</option>
+                        <option value="365">365 días</option>
+                    </select><br><br>
+
+                    <button type="button" id="calcularBtn">Calcular</button>
+                </form>
+
+                <h2 id="resultadosTitulo" style="display: none;">Resultados del Plazo Fijo:</h2>
+                <div id="resultados" style="display: none;">
+                    <p>Resultados del plazo fijo en [nombre del banco]:</p>
+                    <p>Monto ingresado: $[monto]</p>
+                    <p>Intereses a [plazoSeleccionado] días: $[interes]</p>
+                    <p>Tasa de interés anual: [tasaAnual]%</p>
+                </div>      
+        </section>
+        </div>
+
+        <div class="aside-container">
+            <div id="news" class="aside">
+
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="javascript.js"></script>
+</body>
+</html>
+
